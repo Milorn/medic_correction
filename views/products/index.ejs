@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products List</title>
+  </head>
+  <body>
+   <% if (authenticated) { %>
+    <a href="/products/create">Add a product</a>
+   <% } %>
+     
+   
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+      </tr>
+      <% for(let product of products) { %>
+      <tr>
+        <td><a href="/products/<%= product._id %>"><%= product.name %></a></td>
+        <td><%= product.price %></td>
+        <td><%= product.category %></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+</head>
+<body>
+    <form action="/products/<%= product._id %>" method="post">
+        <input type="text" name="name" placeholder="name" value="<%= product.name %>"> <br>
+        <input type="text" name="description" placeholder="description" value="<%= product.description %>"> <br>
+        <input type="number" name="price" placeholder="0" value="<%= product.price %>"> <br>
+        <input type="number" name="quantity" placeholder="0" value="<%= product.quantity %>"> <br>
+        <input type="text" name="category" placeholder="category" value="<%= product.category %>"> <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
